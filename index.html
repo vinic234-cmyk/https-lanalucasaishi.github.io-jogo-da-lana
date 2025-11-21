@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elogios para Lana Brenda</title>
+    <style>
+        body {
+            background: #f9f4ff;
+            font-family: "Arial", sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+            padding: 20px;
+        }
+
+        #frase {
+            font-size: 1.4rem;
+            max-width: 600px;
+            margin-bottom: 30px;
+            color: #4a2c5b;
+            font-weight: 500;
+            line-height: 1.5em;
+        }
+
+        button {
+            padding: 12px 24px;
+            font-size: 1.2rem;
+            border: none;
+            background: #7b4ba1;
+            color: white;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        button:hover {
+            background: #6a3c90;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="frase">Clique para gerar uma frase para a Lana Brenda 💜</div>
+    <button onclick="novaFrase()">Nova frase</button>
+
+    <script>
+        const frases = [
+            'Lana Brenda, há algo no seu sorriso que parece guardar um segredo só meu.',
+            'Quando você passa, o tempo aprende a esperar.',
+            'Seu olhar tem a calma de quem conhece bem o próprio valor.',
+            'Às vezes penso que o universo quis uma obra-prima e chamou você de nome.',
+            'Você é a razão pela qual músicas ganham sentido no meu dia.',
+            'Tem um mistério em você que eu aceitaria desvendar aos poucos.',
+            'Doce e firme — um jeito seu que desarma qualquer rotina.',
+            'Lana Brenda, seu riso é a minha estação favorita.',
+            'Se fosse possível, eu guardaria um pôr do sol só pra te mostrar como você ilumina tudo.',
+            'Há uma força silenciosa em você que me inspira a ser melhor.',
+            'Seu nome soa como promessa, e suas atitudes a cumprem.',
+            'Gosto do jeito que você torna o óbvio especial — sem esforço, só sendo você.',
+            'Você tem um je ne sais quoi que me prende numa boa dúvida: estar perto ou apenas admirar?',
+            'Quando penso em paz, acabo lembrando do seu jeito tranquilo.',
+            'Seu segredo mais bonito é a forma como você cuida de si mesma.',
+            'Há algo em você que transforma segundos em lembranças.',
+            'Seu charme é discreto, mas deixa sinais por onde passa.',
+            'Se fosse possível, eu escreveria um bilhete por dia só pra ver seu nome brilhar.',
+            'Você é um detalhe que faz toda a diferença no meu dia.',
+            'Lana Brenda, estar perto de você seria a minha melhor descoberta.'
+        ];
+
+        function novaFrase() {
+            const aleatorio = Math.floor(Math.random() * frases.length);
+            document.getElementById('frase').innerText = frases[aleatorio];
+        }
+    </script>
+
+</body>
+</html>
