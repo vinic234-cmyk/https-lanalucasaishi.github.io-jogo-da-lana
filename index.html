@@ -1,81 +1,109 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+<!DOCTYPE html><html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elogios para Lana Brenda</title>
-    <style>
-        body {
-            background: #f9f4ff;
-            font-family: "Arial", sans-serif;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            text-align: center;
-            padding: 20px;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Frases para Lana 💜</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      background: linear-gradient(135deg, #4b0082, #8a2be2);
+      overflow: hidden;
+      font-family: "Poppins", sans-serif;
+    }h1 {
+  color: #fff;
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-shadow: 0 0 8px rgba(255,255,255,0.4);
+}
 
-        #frase {
-            font-size: 1.4rem;
-            max-width: 600px;
-            margin-bottom: 30px;
-            color: #4a2c5b;
-            font-weight: 500;
-            line-height: 1.5em;
-        }
+#fraseBox {
+  color: white;
+  font-size: 22px;
+  max-width: 80%;
+  text-align: center;
+  min-height: 80px;
+  margin-bottom: 25px;
+}
 
-        button {
-            padding: 12px 24px;
-            font-size: 1.2rem;
-            border: none;
-            background: #7b4ba1;
-            color: white;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: 0.2s;
-        }
+button {
+  padding: 15px 28px;
+  border: none;
+  background: #ff69b4;
+  color: white;
+  font-size: 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(255,105,180,0.5);
+  transition: 0.2s;
+}
 
-        button:hover {
-            background: #6a3c90;
-        }
-    </style>
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 18px rgba(255,105,180,0.8);
+}
+
+.emojiFloat {
+  position: absolute;
+  font-size: 32px;
+  animation: subir 2.2s ease-out forwards;
+  pointer-events: none;
+}
+
+@keyframes subir {
+  0% { opacity: 1; transform: translateY(0) scale(1); }
+  100% { opacity: 0; transform: translateY(-150px) scale(1.6); }
+}
+
+  </style>
 </head>
-<body>
+<body>  <h1>Frases para Lana 💜</h1>
+  <div id="fraseBox"></div>
+  <button onclick="novaFrase()">Gerar frase ✨</button>  <script>
+    const frases = [
+      "Lana, você é o tipo de mistério que eu quero decifrar devagarinho… 💜",
+      "Tem algo em você que puxa minha atenção sem pedir permissão…",
+      "Se eu pudesse escolher um lugar pra estar agora, seria perto de você.",
+      "Você tem uma presença que deixa tudo mais bonito sem esforço.",
+      "Lana, você é meu ponto fraco e meu canto favorito ao mesmo tempo.",
+      "Tem dias que você passa na minha mente… e decide ficar.",
+      "Existe poesia no jeito que você existe.",
+      "Quanto mais eu conheço você, mais eu quero conhecer.",
+      "Você não é só atraente… você é magnética.",
+      "Lana, seu sorriso parece trapacear com o universo inteiro." 
+    ];
 
-    <div id="frase">Clique para gerar uma frase para a Lana Brenda 💜</div>
-    <button onclick="novaFrase()">Nova frase</button>
+    const emojis = ["💜", "💗", "✨", "🌙", "💘", "💞", "💖"];
 
-    <script>
-        const frases = [
-            'Lana Brenda, há algo no seu sorriso que parece guardar um segredo só meu.',
-            'Quando você passa, o tempo aprende a esperar.',
-            'Seu olhar tem a calma de quem conhece bem o próprio valor.',
-            'Às vezes penso que o universo quis uma obra-prima e chamou você de nome.',
-            'Você é a razão pela qual músicas ganham sentido no meu dia.',
-            'Tem um mistério em você que eu aceitaria desvendar aos poucos.',
-            'Doce e firme — um jeito seu que desarma qualquer rotina.',
-            'Lana Brenda, seu riso é a minha estação favorita.',
-            'Se fosse possível, eu guardaria um pôr do sol só pra te mostrar como você ilumina tudo.',
-            'Há uma força silenciosa em você que me inspira a ser melhor.',
-            'Seu nome soa como promessa, e suas atitudes a cumprem.',
-            'Gosto do jeito que você torna o óbvio especial — sem esforço, só sendo você.',
-            'Você tem um je ne sais quoi que me prende numa boa dúvida: estar perto ou apenas admirar?',
-            'Quando penso em paz, acabo lembrando do seu jeito tranquilo.',
-            'Seu segredo mais bonito é a forma como você cuida de si mesma.',
-            'Há algo em você que transforma segundos em lembranças.',
-            'Seu charme é discreto, mas deixa sinais por onde passa.',
-            'Se fosse possível, eu escreveria um bilhete por dia só pra ver seu nome brilhar.',
-            'Você é um detalhe que faz toda a diferença no meu dia.',
-            'Lana Brenda, estar perto de você seria a minha melhor descoberta.'
-        ];
+    function novaFrase() {
+      const box = document.getElementById("fraseBox");
+      const frase = frases[Math.floor(Math.random() * frases.length)];
 
-        function novaFrase() {
-            const aleatorio = Math.floor(Math.random() * frases.length);
-            document.getElementById('frase').innerText = frases[aleatorio];
-        }
-    </script>
+      digitarTexto(box, frase, 0);
 
-</body>
-</html>
+      criarEmoji();
+    }
+
+    function digitarTexto(element, texto, i) {
+      if (i === 0) element.innerHTML = "";
+      if (i < texto.length) {
+        element.innerHTML += texto.charAt(i);
+        setTimeout(() => digitarTexto(element, texto, i + 1), 25);
+      }
+    }
+
+    function criarEmoji() {
+      const emoji = document.createElement("div");
+      emoji.classList.add("emojiFloat");
+      emoji.innerHTML = emojis[Math.floor(Math.random() * emojis.length)];
+
+      const x = Math.random() * window.innerWidth;
+      const y = window.innerHeight - 50;
+
+      emoji.style.left = `${x}px`;
+      emoji.style.top = `${y
