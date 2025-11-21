@@ -8,7 +8,8 @@ const frases = [
   "Existe poesia no jeito que você existe.",
   "Quanto mais eu conheço você, mais eu quero conhecer.",
   "Você não é só atraente… você é magnética.",
-  "Lana, seu sorriso parece trapacear com o universo inteiro."
+  "Lana, seu sorriso parece trapacear com o universo inteiro.",
+  
   "Eu gosto do jeito que você existe… parece que foi moldada no detalhe.",
   "Tem algo em você que não passa… fica, cresce, ecoa.",
   "Você não é só bonita… você tem presença, é diferente.",
@@ -58,7 +59,9 @@ const frases = [
   "Quanto mais eu te vejo, mais sentido tudo faz.",
   "Você tem um tipo de presença que deveria ser estudada.",
   "Se eu pudesse escolher um destino… escolheria o seu caminho.",
-  "Você não é só alguém… é impacto.", ];
+  "Você não é só alguém… é impacto."
+];
+
 
 const emojis = ["💜", "💗", "✨", "🌙", "💞", "💖", "💘"];
 
