@@ -58,8 +58,7 @@ const frases = [
   "Quanto mais eu te vejo, mais sentido tudo faz.",
   "Você tem um tipo de presença que deveria ser estudada.",
   "Se eu pudesse escolher um destino… escolheria o seu caminho.",
-  "Você não é só alguém… é impacto."
-  ];
+  "Você não é só alguém… é impacto.", ];
 
 const emojis = ["💜", "💗", "✨", "🌙", "💞", "💖", "💘"];
 
